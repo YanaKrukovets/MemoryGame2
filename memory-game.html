@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
+        <title>Memory Game</title>
+        <link rel="stylesheet" href="slyles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+   
+        <header id="default">
+           <nav>    
+                <a href="#default" id="default" class="logo" onclick="topNavIcon(event)">Memory Game</a>
+                <div class="topnav" id="myTopnav">
+                <div class="header-right">
+                        <a href="#play" onclick="topNavIcon(event)">Play</a>
+                        <a href="#rules" onclick="topNavIcon(event)">Rules</a>
+                        <a href="#about" onclick="topNavIcon(event)">About</a>
+                        <a href="javascript:void(0);" class="icon" onclick="topNavIcon(event)">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                </div>
+            </div>
+            </nav>
+            <div class="green-diamond diamond"></div>
+            <div class="red-diamond diamond"></div>
+            <div class="yellow-diamond diamond"></div>
+            <img class="header-image" src="images/memory-game.svg" alt="Memory Game">
+        </header>
+
+        <section id="play" class="distancy">
+            <div class="title distancy">
+                <span>How many sequences can you remember?</span>
+            </div>
+            <div class="game">
+                <div id="green-btn" class="color-button button green-button" onclick="checkButton(event)" onmousedown="changeOpacity(event)" onmouseup="removeOpacity(event)"></div>
+                <div id="red-btn" class="color-button button red-button" onclick="checkButton(event)" onmousedown="changeOpacity(event)" onmouseup="removeOpacity(event)"></div>
+            </div>
+            <div class="game">
+                <button class="start button" onclick="game()">Start</button>
+            </div>
+            <div class="game">
+                <div id="blue-btn" class="color-button button blue-button" onclick="checkButton(event)" onmousedown="changeOpacity(event)" onmouseup="removeOpacity(event)"></div>
+                <div id="yellow-btn" class="color-button button yellow-button" onclick="checkButton(event)" onmousedown="changeOpacity(event)" onmouseup="removeOpacity(event)"></div>
+            </div>
+            <h3 id="turn">Click "Start"</h3>
+            <h3 id="sequence"></h3>
+        </section>
+
+        <section id="rules" class="distancy">
+            <div class="title">
+                <span>Rules</span>
+            </div>
+            <div class="text">
+                In this game you have four different circles, each with a unique colour and sound which is activated when pressed. 
+                The sound and color aids the player in remembering the sequence and the game ends if the player misses a step in the sequence.
+            </div>
+            <div class="text">
+                <ol> 
+                    <li>Click "Start".</li>
+                    <li>Wait and remember the sequence of glowing circles.</li>
+                    <li>Tap on the circles in accordance with the remembered chain.</li>
+                    <li>Have fun and train your brain.</li>
+                </ol>
+                <img class="picture" src="images/rules.svg" alt="Rules">
+            </div>
+        </section>
+        <section id="about" class="distancy grey-color">
+            <div class="title">
+                <span>About</span>
+            </div>
+            <div class="text">Human memory is inextricably linked with the brain and thought processes. The more information we hold in memory, 
+                the more activity in the brain, which has to process this information. This is how the brain learns and works better.
+                Research also shows that regular memory training increases IQ in adults and can improve memory in older adults and return 
+                it to those of middle age. 
+            </div>
+            <div class="text">
+                In this game you have four different circles, each with a unique colour and sound which is activated when pressed. 
+                The sound and color aids the player in remembering the sequence and the game ends if the player misses a step in the sequence.
+            </div>
+            <div class="text">
+                So, let's train our memory and improve the work of our brain.
+                <img class="picture" src="images/about.svg" alt="About">
+            </div>
+        </section>
+        <footer class="distancy">&copy;Yana Krukovets, 2021</footer>
+        <script src="game.js"></script>
+    </body>
+</html>
